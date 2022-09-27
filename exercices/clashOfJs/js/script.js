@@ -1,25 +1,6 @@
 const userListDOM = document.querySelector('#userList');
 
-const playerList = [
-    {
-        pseudo: "ThomasDu33",
-        type: "archer",
-        level: 1,
-        xp: 0
-    },
-    {
-        pseudo: "John",
-        type: "wizard",
-        level: 1,
-        xp: 0
-    }, 
-    {
-        pseudo: "RoxerGamerDu13",
-        type: "giant",
-        level: 1,
-        xp: 0
-    }
-]
+const playerList = []
 // index                 0          1         2
 // playerList[0] // ThomasDu33
 // playerList[1] // John
@@ -36,7 +17,7 @@ function showPlayerCardListInDOM(){
     
         playerCard.innerHTML = `
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/${player.type}.png" />
-            <p>${player.pseudo} is a ${player.type}</p>
+            <p>${player.description()}</p>
             <p class="level">lvl: ${player.level}</p>
             <div class="xp">
                 xp: ${player.xp}
@@ -49,12 +30,13 @@ function showPlayerCardListInDOM(){
         const levelDOM = playerCard.querySelector(".level")
 
         button.addEventListener("click", () => {
-            player.xp += 10
+            // player.xp += 10
             
-            if(player.xp >= 100){
-                player.level += 1
-                player.xp = 0
-            }
+            // if(player.xp >= 100){
+            //     player.level += 1
+            //     player.xp = 0
+            // }
+            player.upgradeXp()
             
             console.log("player : ", player)
             levelDOM.innerText = `lvl: ${player.level}`
@@ -90,7 +72,17 @@ form.addEventListener('submit', function(event){
         pseudo: pseudoValue,
         type: typeValue, // replace value in attribut type in object
         level: 1,
-        xp: 0
+        xp: 0,
+        description: function(){
+            return `${this.pseudo} is a ${this.type}`
+        },
+        upgradeXp: function(){
+            this.xp += 10
+            if(this.xp >= 100){
+                this.level += 1
+                this.xp = 0
+            }
+        }
     }
 
     // add value to playerList array
