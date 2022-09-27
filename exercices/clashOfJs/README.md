@@ -20,3 +20,15 @@
 // alors le lvl du joueur augmente de 
 
 
+
+
+<div class="player">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer.png" />
+    <p>test is a archer</p>
+    <p>lvl: 1</p>
+    <div class="xp">
+        <div class="bar"></div>
+        <p></p>
+    </div>
+    <button class="up">+</button>
+</div> 

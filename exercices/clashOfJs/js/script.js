@@ -1,0 +1,103 @@
+const userListDOM = document.querySelector('#userList');
+
+const playerList = [
+    {
+        pseudo: "ThomasDu33",
+        type: "archer",
+        level: 1,
+        xp: 0
+    },
+    {
+        pseudo: "John",
+        type: "wizard",
+        level: 1,
+        xp: 0
+    }, 
+    {
+        pseudo: "RoxerGamerDu13",
+        type: "giant",
+        level: 1,
+        xp: 0
+    }
+]
+// index                 0          1         2
+// playerList[0] // ThomasDu33
+// playerList[1] // John
+// playerList[2] // RoxerGamerDu13
+
+function showPlayerCardListInDOM(){
+    userListDOM.innerHTML = ""
+    playerList.forEach( (player, index) => {
+        console.log(`La valeur de l'index ${index} est ${player}`)
+        console.log("playerList[index] : ", playerList[index])
+    
+        const playerCard = document.createElement("div")
+        playerCard.classList.add("player")
+    
+        playerCard.innerHTML = `
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/${player.type}.png" />
+            <p>${player.pseudo} is a ${player.type}</p>
+            <p class="level">lvl: ${player.level}</p>
+            <div class="xp">
+                xp: ${player.xp}
+            </div>
+            <button class="up">+</button>
+        `
+
+        const button = playerCard.querySelector(".up")
+        const xpDOM = playerCard.querySelector(".xp")
+        const levelDOM = playerCard.querySelector(".level")
+
+        button.addEventListener("click", () => {
+            player.xp += 10
+            
+            if(player.xp >= 100){
+                player.level += 1
+                player.xp = 0
+            }
+            
+            console.log("player : ", player)
+            levelDOM.innerText = `lvl: ${player.level}`
+            xpDOM.innerText = `xp: ${player.xp}`
+        })
+
+        userListDOM.append(playerCard)
+    })
+}
+
+// Au chargement de la page
+showPlayerCardListInDOM()
+
+// select form
+const form = document.querySelector('form')
+// add event listener form submit
+form.addEventListener('submit', function(event){
+    event.preventDefault()
+    console.log("form submit")
+    // select input
+    const inputPseudo = document.querySelector('#pseudo')
+    // get value of input
+    const pseudoValue = inputPseudo.value
+
+    // select #type
+    const selectType = document.querySelector('#type')
+    // get value of #type
+    const typeValue = selectType.value
+    console.log("typeValue : ", typeValue)
+    
+
+    const player = {
+        pseudo: pseudoValue,
+        type: typeValue, // replace value in attribut type in object
+        level: 1,
+        xp: 0
+    }
+
+    // add value to playerList array
+    playerList.push(player)
+
+    console.log("playerList : ", playerList)
+    
+    // foreach
+    showPlayerCardListInDOM()
+})
