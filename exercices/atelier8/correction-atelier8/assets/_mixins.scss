@@ -1,0 +1,19 @@
+/*
+ * MIXINS
+ */
+ @mixin title-bar{
+    content: "";
+    height: .5rem;
+    background-color: $primary-color;
+    width: 100%;
+}
+@mixin btn-primary(){
+    background-color: $primary-color;
+    color: $light-color;
+    border: 1px solid transparent;
+}
+@mixin btn-outline() {
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    background-color: transparent;
+}

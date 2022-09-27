@@ -1,0 +1,54 @@
+#logo{
+    border-radius: 50%;
+}
+
+h1{
+    color: yellow;
+}
+
+#title-primary{
+    color: sandybrown;
+}
+
+ul li{
+    color: blue;
+}
+
+.secondary-li{
+    color: red;
+    text-decoration: underline;
+}
+
+.primary-button{
+    background-color: rgb(84, 84, 170);
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+    transition: all .3s;
+    cursor: pointer;
+}
+/*
+    Comment
+*/
+.primary-button:hover{
+    border-color:  rgb(84, 84, 170);
+    background: transparent;
+    color: rgb(84, 84, 170);
+}
+
+.product1{
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+.product2{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}

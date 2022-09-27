@@ -1,0 +1,45 @@
+.carre{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+#about{
+    margin-top: 20px;
+    display: flex;
+}
+
+.carre1{
+    width: 50%;
+    height: 300px;
+    background-color: blue;
+}
+
+.carre2{
+    width: 50%;
+    height: 300px;
+    background-color: green;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .carre{
+        background-color: blue;
+    }
+    #about{
+        flex-direction: column;
+    }
+    .carre1{
+        width: 100%;
+    }
+    .carre2{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .carre{
+        background-color: green;
+    }
+}

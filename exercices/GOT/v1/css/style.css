@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+header{
+    background-color: red;
+    height: 600px;
+}
+
+section{
+    display: flex;
+}
+
+div{
+    height: 500px;
+    width: 50%;
+}
+div:first-child{
+    background-color: blue;
+}
+div:last-child{
+    background-color: green;
+}
+footer{
+    background-color: brown;
+    height: 200px;
+}

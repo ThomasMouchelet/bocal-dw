@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+    color: #149414;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 4em;
+    text-shadow: 0px 0px 55px #fff;
+}
+
+.binary{
+    position: absolute;
+    top: 0;
+    animation: move 10s linear ;
+    font-size: 2em;
+    transition: all 0.5s ease-in-out;
+}
+.binary.inHover{
+    text-shadow: 0px 0px 55px #fff;
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(110vh);
+    }
+}

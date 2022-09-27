@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+header{
+    background-color: red;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header video{
+    width: 100%;
+}
+#section1{
+    display: flex;
+}
+
+#section1 div{
+    height: 800px;
+    width: 50%;
+}
+#section1{
+    background-image: url(../img/section1-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+div:first-child{
+    background: linear-gradient(to right, #111, transparent);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+div:last-child h2{
+    font-size: 2em;
+}
+div:last-child p{
+    font-size: 1em;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    background-color: #111;
+    align-items: center;
+    padding: 50px;
+}
+nav{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+nav a{
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+#section2 div{
+    width: 50%;
+}
+#section2{
+    background-image: url(../img/bg-section2.jpeg);
+    display: flex;
+}
+#section2 div:last-child{
+    padding: 20px;
+}
+.persos img{
+    width: 200px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.249);
+}

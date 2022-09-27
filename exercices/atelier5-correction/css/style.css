@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+.rec1{
+    background-color: blue;
+    height: 100px;
+}
+.group-row{
+    display: flex;
+    margin: 10px 0;
+}
+.group-row div{
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    padding: 50px;
+}
+.carre-gauche{
+    background-color: blue;
+    height: 100px;
+    width: 40%;
+}
+.carre-droite{
+    background-color: red;
+    height: 100px;
+    width: 60%;
+}
+.container{
+    display: flex;
+}
+.postion-group div{
+    background-color: rgb(255, 0, 106);
+    height: 50px;
+    width: 50px;
+}
+.top-left{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.top-right{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.bottom-left{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.bottom-right{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.center{
+    position: fixed;
+    top: 35%;
+    left: 50%;
+}

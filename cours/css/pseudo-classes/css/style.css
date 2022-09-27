@@ -1,0 +1,53 @@
+
+.row{
+    display: flex;
+}
+.col{
+    width: 50%;
+    /* height: 300px;
+    background-color: red;
+    border: 2px solid black; */
+}
+
+form{
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+}
+
+input,
+textarea{
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+input:focus{
+    color: green;
+}
+
+::placeholder{
+    color: red;
+}
+
+input[type=submit]{
+    background: linear-gradient(to right, rgb(208, 108, 108), rgb(182, 55, 63));
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+
+h2::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: red;
+    margin-top: 10px;
+    transition: all .3s;
+}
+
+h2:hover::after{
+    width: 100px;
+}

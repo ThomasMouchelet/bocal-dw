@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+#modal{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    z-index: 999; 
+    width: 50%;
+    height: 50%;
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    transform: translateX(-50%);
+    display: none;
+}

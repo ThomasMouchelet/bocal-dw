@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;   
+}
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+#logo{
+    width: 80px;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+ul{
+    display: flex;
+    list-style-type:none;
+    justify-content: space-between;
+}
+li{
+    margin-left: 10px;
+}
+#video-container{ 
+    width: 100%;
+}
+video{
+    width: 100%;
+}
+
+a{
+    color: rgb(54,111,200);
+    text-decoration: none;
+    opacity: .8;
+    transition: all .3s ease-in-out;
+}
+a:hover{
+    font-weight: 700;
+    border-bottom: 2px solid rgb(54,111,200);
+    padding-bottom: 10px;
+    opacity: 1;
+}
+
+.col{
+    width: 50%;
+    overflow: scroll;
+    height: 800px;
+}
+.col:nth-child(odd){
+    background-color: blue;
+}
+.col:nth-child(even){
+    background-color: red;
+}
+#about{
+    display: flex;
+    flex-wrap: wrap;
+}
+.profil-img{
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/pexels-chloe-1043471.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#miam{
+    background-image: url(https://f.roocdn.com/images/menu_tags/288/menu-tag-image.jpg?width=1320&height=300&auto=webp&format=jpg&fit=crop&v=1648802301);
+    background-size: cover;
+    position: relative;
+    top: 300px;
+    left: 300px;
+}
+#miam h2{
+    text-align: center;
+    font-size: 4em;
+    color: #fff;
+    padding: 50px;
+}
+
+#absolute{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+    position: absolute;
+    bottom: 200px;
+    left: 200px;
+    z-index: 1;
+}

@@ -1,0 +1,24 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ef5350, rgb(210, 210, 80));
+}
+.card{
+    border: 1px solid #ccc;
+    padding: 40px;
+    border-radius: 5px;
+    background: #fff;
+}
+form{
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+}
+#map{
+    width: 600px;
+    height: 600px;
+}
