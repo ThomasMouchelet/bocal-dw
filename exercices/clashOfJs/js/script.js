@@ -30,12 +30,6 @@ function showPlayerCardListInDOM(){
         const levelDOM = playerCard.querySelector(".level")
 
         button.addEventListener("click", () => {
-            // player.xp += 10
-            
-            // if(player.xp >= 100){
-            //     player.level += 1
-            //     player.xp = 0
-            // }
             player.upgradeXp()
             
             console.log("player : ", player)
